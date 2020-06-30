@@ -1,5 +1,5 @@
 import React from "react";
-import {Router, Route} from "react-router";
+import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import createBrowserHistory from "../history"
 
 import { Root } from "./Root";
@@ -10,11 +10,13 @@ export class App extends React.Component {
   render() {
     return(
       <Router history={createBrowserHistory}>
-        <Route path={"/"} component={Root}>
-          <Route path={"user"} component={User} />
-          <Route path={"home"} component={Home} />
-        </Route>
-        <Route path={"home"} component={Home} />
+        <main>
+          <Root />
+          <Switch>
+            <Route path="/home" component={Home} />
+            <Route path="/user" component={User} />
+          </Switch>
+        </main>
       </Router>
     );
   }
