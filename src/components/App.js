@@ -10,13 +10,13 @@ export class App extends React.Component {
   render() {
     return(
       <Router history={createBrowserHistory}>
-        <main>
+        {/* <main> */}
           <Root />
           <Switch>
             <Route path="/home" component={Home} />
             <Route path="/user" component={User} />
           </Switch>
-        </main>
+        {/* </main> */}
       </Router>
     );
   }
