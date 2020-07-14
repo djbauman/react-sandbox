@@ -1,12 +1,13 @@
-import React, { Component, useState } from "react";
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
 
-export const Root = (props) => {
-  return (
-    <div>
-      <h2>Root Page</h2>
-    </div>
-  );
+import { Header } from "./Header";
+
+export default class Root extends Component {
+  render() {
+    return (
+      <div>
+        <Header />
+      </div>
+    );
+  }
 }
-
-

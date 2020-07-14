@@ -1,8 +1,7 @@
 import React, { Component, useState } from "react";
-import PropTypes from 'prop-types';
 import { Modal, Button } from "react-bootstrap";
 
-export default function Example() {
+ function Example() {
   const [show, setShow] = useState(false);
 
   return (
@@ -38,4 +37,12 @@ export default function Example() {
   );
 }
 
-
+export default class Page1 extends Component {
+  render() {
+    return (
+      <div>
+        <h3>Page 1 goes here.</h3>
+      </div>
+    )
+  }
+}

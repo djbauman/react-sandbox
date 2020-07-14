@@ -5,7 +5,7 @@ import { NewButton } from "./NewButton";
 
 export const Header = (props) => {
   return (
-    <Router>
+    <div class="css-tester">
       <Navbar bg="light" expand="lg">
         <Dropdown as={ButtonGroup}>
           <Button variant="success">New</Button>
@@ -20,7 +20,10 @@ export const Header = (props) => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link><Link to="/">Root</Link></Nav.Link>
-            <Nav.Link><Link to="/home">Home</Link></Nav.Link>
+            <Nav.Link><Link to="/page1">Page 1</Link></Nav.Link>
+            <Nav.Link><Link to="/page2">Page 2</Link></Nav.Link>
+            {/* <Nav.Link href="/page1">Page 1</Nav.Link>
+            <Nav.Link href="/page2">Page 2</Nav.Link> */}
           </Nav>
           <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -28,6 +31,6 @@ export const Header = (props) => {
           </Form>
         </Navbar.Collapse>
       </Navbar>
-    </Router>
+    </div>
   );
 };
