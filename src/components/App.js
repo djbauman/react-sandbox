@@ -7,10 +7,11 @@ import Home from "./Home";
 export class App extends React.Component {
   render() {
     return (
-      <div>
-        <Header />
-        <Home />
-      </div>
+      <Router>
+        <div>
+          <Header />
+        </div>
+      </Router>
     );
   }
 }
