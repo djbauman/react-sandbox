@@ -1,96 +1,41 @@
-import React from "react";
+import React, { Component, useState } from "react";
 import PropTypes from 'prop-types';
+import { Modal, Button } from "react-bootstrap";
 
-export class Home extends React.Component {
+export default function Example() {
+  const [show, setShow] = useState(false);
 
-  constructor(props) {
-    super();
-    this.state = {
-      age: props.initialAge,
-      status: 0,
-      homeLink: props.initialLinkName
-    };
-    setTimeout(() => {
-      this.setState({
-        status: 1
-      });
-    }, 3000)
-    console.log("Constructor 😁");
-  }
+  return (
+    <>
+      <Button variant="primary" onClick={() => setShow(true)}>
+        Custom Width Modal
+      </Button>
 
-  componentWillMount() {
-    console.log("Component will mount");
-  }
-
-  componentDidMount() {
-    console.log("Component did mount");
-  }
-
-  componentWillReceiveProps(nextProps) {
-    console.log("Component will receive props", nextProps);
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log("Should component update", nextProps, nextState);
-    // if (nextState.status === 1) {
-    //   return false;
-    // }
-    return true;
-  }
-
-  componentWillUpdate(nextProps, nextState) {
-    console.log("Component will update", nextProps, nextState);
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    console.log("Component did update", prevProps, prevState)
-  }
-
-  componentWillUnmount() {
-    console.log("Component will unmount");
-  }
-
-  onMakeOlder() {
-    console.log("Executing onMakeOlder function.");
-    this.setState({
-      age: this.state.age + 1
-    });
-  }
-
-  onChangeLink() {
-    this.props.changeLink(this.state.homeLink);
-  }
-
-  onHandleChange(event) {
-    this.setState({
-      homeLink: event.target.value
-    });
-  }
-
-  render() {
-    // console.log(this.props)
-    return(
-      <div>
-        <p>In a new Component!</p>
-        <p>Your name is {this.props.name}, your age is {this.state.age}.</p>
-        <p>Status: {this.state.status}</p>
-        <hr/>
-        {/* <button onClick={this.onMakeOlder.bind(this)} className="btn btn-primary">Make me older!</button> */}
-        <button onClick={() => this.onMakeOlder()} className="btn btn-primary">Make me older!</button>
-        <hr/>
-        <button onClick={() => this.props.greet()} className="btn btn-primary">Greet</button>
-        <hr/>
-        <input type="text" value={this.state.homeLink} 
-              onChange={(event) => this.onHandleChange(event)}/>
-        <button onClick={this.onChangeLink.bind(this)} className="btn btn-primary">Change Header Link</button>
-      </div>
-    );
-  }
+      <Modal
+        show={show}
+        onHide={() => setShow(false)}
+        dialogClassName="modal-90w"
+        aria-labelledby="example-custom-modal-styling-title"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="example-custom-modal-styling-title">
+            Custom Modal Styling
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>
+            Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
+            commodi aspernatur enim, consectetur. Cumque deleniti temporibus
+            ipsam atque a dolores quisquam quisquam adipisci possimus
+            laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
+            accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
+            reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
+            deleniti rem!
+          </p>
+        </Modal.Body>
+      </Modal>
+    </>
+  );
 }
 
-Home.propTypes = {
-  name: PropTypes.string,
-  initialAge: PropTypes.number,
-  greet: PropTypes.func,
-  initialLinkName: PropTypes.string,
-};
+
