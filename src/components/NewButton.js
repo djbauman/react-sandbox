@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { Modal, Button, ButtonGroup, Dropdown } from "react-bootstrap";
 import MyModal1 from './MyModal1';
+import MyModal2 from './MyModal2';
+import MyModal3 from './MyModal3';
 
 export class NewButton extends Component {
   constructor(props) {
@@ -18,7 +20,7 @@ export class NewButton extends Component {
     })
   }
 
-  handleClose = () => {
+  handleClose() {
     console.log("Clicked handleClose.");
     this.setState({
       show: false
@@ -32,16 +34,17 @@ export class NewButton extends Component {
           <Button variant="success" onClick={this.onClickNew} >New</Button>
           <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
           <Dropdown.Menu>
-            <Dropdown.Item><Link to="/action-1">New thing 1</Link></Dropdown.Item>
+            <Dropdown.Item><Link onClick={this.onClickNew}>New thing 1 </Link></Dropdown.Item>
             <Dropdown.Item><Link to="/action-2">New thing 2</Link></Dropdown.Item>
             <Dropdown.Divider />
             <Dropdown.Item><Link to="/action-3">New thing 3</Link></Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
 
-        <MyModal1 show={this.state.show} onHide={this.handleClose} />
-        {/* <MyModal2 />
-        <MyModal3 /> */}
+        <MyModal1 show={this.state.show} handleClose={() => this.handleClose()} />
+        <MyModal2 show={this.state.show} handleClose={() => this.handleClose()} />
+        <MyModal3 show={this.state.show} handleClose={() => this.handleClose()} />
+       
 
 
 
