@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Root  from "./Root";
+import Header  from "./Header";
 import Screen1 from "./Screen1";
 import Screen2 from "./Screen2";
 import Screen3 from "./Screen3";
@@ -13,7 +13,7 @@ export class App extends React.Component {
   render() {
     return (
       <Router>
-        <Root />
+        <Header />
         <Switch>
           <Route path={"/screen1"} component={Screen1} />
           <Route path={"/screen2"} component={Screen2} />

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Modal, Button, ButtonGroup, Dropdown } from "react-bootstrap";
 import MyModal1 from './MyModal1';
 
-
 export class NewButton extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +11,7 @@ export class NewButton extends Component {
     };
   }
 
-  onClickNewButton = () => {
+  onClickNew = () => {
     console.log("Clicked onClickNewButton.");
     this.setState({
       show: true
@@ -24,29 +23,13 @@ export class NewButton extends Component {
     this.setState({
       show: false
     })
-
   }
 
   render() {
-    let Modal1 = <Modal show={this.state.show} onHide={this.handleClose}>
-      <Modal.Header closeButton>
-        <Modal.Title>Modal heading</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={this.handleClose}>
-          Close
-    </Button>
-        <Button variant="primary" onClick={this.handleClose}>
-          Save Changes
-    </Button>
-      </Modal.Footer>
-    </Modal>
-
     return (
       <div>
         <Dropdown as={ButtonGroup}>
-          <Button variant="success" onClick={this.onClickNewButton} >New</Button>
+          <Button variant="success" onClick={this.onClickNew} >New</Button>
           <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
           <Dropdown.Menu>
             <Dropdown.Item><Link to="/action-1">New thing 1</Link></Dropdown.Item>
@@ -56,7 +39,10 @@ export class NewButton extends Component {
           </Dropdown.Menu>
         </Dropdown>
 
-        {Modal1}
+        <MyModal1 show={this.state.show} onHide={this.handleClose} />
+        {/* <MyModal2 />
+        <MyModal3 /> */}
+
 
 
       </div>
