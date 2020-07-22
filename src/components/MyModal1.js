@@ -10,7 +10,7 @@ export default class MyModal1 extends Component {
   render() {
     return (
       <>
-        <Modal show={this.props.show_m1} handleClose={this.props.handleClose} >
+        <Modal show={this.props.show_m1} onHide={this.props.onHide} >
           <Modal.Header>
             <Modal.Title>Modal 1</Modal.Title>
           </Modal.Header>
@@ -18,9 +18,9 @@ export default class MyModal1 extends Component {
             I will not close if you click outside me. Don't even try to press the escape key.
         </Modal.Body>
           <Modal.Footer>
-            {/* <Button variant="secondary" onClick={this.props.handleClose}> */}
-            <Button variant="secondary" onClick={this.props.handleClose} >Close</Button>
-            <Button variant="primary" onClick={this.props.handleClose} >Understood</Button>
+            {/* <Button variant="secondary" onClick={this.props.onHide}> */}
+            <Button variant="secondary" onClick={this.props.onHide} >Close</Button>
+            <Button variant="primary" onClick={this.props.onHide} >Understood</Button>
           </Modal.Footer>
         </Modal>
       </>
@@ -29,16 +29,16 @@ export default class MyModal1 extends Component {
 }
 
 
-// <Modal show={this.state.show} onHide={this.handleClose}>
+// <Modal show={this.state.show} onHide={this.onHide}>
 //   <Modal.Header closeButton>
 //     <Modal.Title>Modal heading</Modal.Title>
 //   </Modal.Header>
 //   <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
 //   <Modal.Footer>
-//     <Button variant="secondary" onClick={this.handleClose}>
+//     <Button variant="secondary" onClick={this.onHide}>
 //       Close
 //     </Button>
-//     <Button variant="primary" onClick={this.handleClose}>
+//     <Button variant="primary" onClick={this.onHide}>
 //       Save Changes
 //     </Button>
 //   </Modal.Footer>

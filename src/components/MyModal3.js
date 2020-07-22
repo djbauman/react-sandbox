@@ -5,8 +5,8 @@ function MyModal3(props) {
   return (
     <Modal
       {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
+      dialogClassName="modal-90w"
+      aria-labelledby="my-class"
       centered
     >
       <Modal.Header closeButton>
@@ -14,7 +14,7 @@ function MyModal3(props) {
           Modal heading
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body className="modal-body-90h">
         <h4>Centered Modal</h4>
         <p>
           Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
@@ -23,7 +23,7 @@ function MyModal3(props) {
         </p>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.handleClose}>Close</Button>
+        <Button onClick={props.onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
   );

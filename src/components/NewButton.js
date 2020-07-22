@@ -24,8 +24,8 @@ export class NewButton extends Component {
     this.setState(obj);
   }
 
-  handleClose(i) {
-    console.log("handleClose() called with parameter " + i);
+  onHide(i) {
+    console.log("onHide() called with parameter " + i);
     var obj = {}
     var key = "show_m" + i
     obj[key] = false;
@@ -46,9 +46,9 @@ export class NewButton extends Component {
           </Dropdown.Menu>
         </Dropdown>
 
-        <MyModal1 show_m1={this.state.show_m1} handleClose={() => this.handleClose(1)} />
-        <MyModal2 show_m2={this.state.show_m2} handleClose={() => this.handleClose(2)} />
-        <MyModal3 show={this.state.show_m3} handleClose={() => this.handleClose(3)} />
+        <MyModal1 show_m1={this.state.show_m1} onHide={() => this.onHide(1)} />
+        <MyModal2 show_m2={this.state.show_m2} onHide={() => this.onHide(2)} />
+        <MyModal3 show={this.state.show_m3} onHide={() => this.onHide(3)} />
         
 
       </div>

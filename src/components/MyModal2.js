@@ -10,7 +10,7 @@ export default class MyModal2 extends Component {
   render() {
     return (
       <>
-        <Modal show={this.props.show_m2} handleClose={this.props.handleClose}>
+        <Modal show={this.props.show_m2} onHide={this.props.onHide}>
           <Modal.Header>
             <Modal.Title>Modal 2</Modal.Title>
           </Modal.Header>
@@ -18,8 +18,8 @@ export default class MyModal2 extends Component {
             This is Modal 2.
         </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={this.props.handleClose}>Close</Button>
-            <Button variant="primary" onClick={this.props.onClick}>Understood</Button>
+            <Button variant="secondary" onClick={this.props.onHide}>Close</Button>
+            <Button variant="primary" onClick={this.props.onHide}>Understood</Button>
           </Modal.Footer>
         </Modal>
       </>

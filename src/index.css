@@ -19,10 +19,14 @@ Nav.Link {
   font-size: 10em;
 }
 
-.tester {
-  font: green;
+.modal-90w {
+  /* color: green; */
+  width: 95%;
+  max-width: none;
 }
 
-.css-tester {
-  font: 2em;
+.modal-body-90h {
+  color: blue;
+  height: 50em;
+  max-height: 95%;
 }
