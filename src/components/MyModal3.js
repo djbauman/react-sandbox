@@ -1,28 +1,31 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
-export default class MyModal3 extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <>
-        <Modal show={this.props.show_m3} handleClose={this.props.handleClose}>
-          <Modal.Header>
-            <Modal.Title>Modal 3</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            This is Modal 3.
-        </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={this.props.handleClose}>Close</Button>
-            <Button variant="primary" onClick={this.props.onClick}>Understood</Button>
-          </Modal.Footer>
-        </Modal>
-      </>
-    );
-  }
+function MyModal3(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Modal heading
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>Centered Modal</h4>
+        <p>
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+          consectetur ac, vestibulum at eros.
+        </p>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.handleClose}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
 }
+export default MyModal3;

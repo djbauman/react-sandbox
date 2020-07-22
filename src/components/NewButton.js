@@ -17,6 +17,7 @@ export class NewButton extends Component {
 
   // TODO: Learn why => () is different from normal function.
   onClickNew = (i) => {
+    console.log("onClickNew() called with parameter " + i);
     var obj = {}
     var key = "show_m" + i
     obj[key] = true;
@@ -24,8 +25,7 @@ export class NewButton extends Component {
   }
 
   handleClose(i) {
-    console.log("Clicked handleClose...");
-    console.log("i is: " + i);
+    console.log("handleClose() called with parameter " + i);
     var obj = {}
     var key = "show_m" + i
     obj[key] = false;
@@ -48,7 +48,7 @@ export class NewButton extends Component {
 
         <MyModal1 show_m1={this.state.show_m1} handleClose={() => this.handleClose(1)} />
         <MyModal2 show_m2={this.state.show_m2} handleClose={() => this.handleClose(2)} />
-        <MyModal3 show_m3={this.state.show_m3} handleClose={() => this.handleClose(3)} />
+        <MyModal3 show={this.state.show_m3} handleClose={() => this.handleClose(3)} />
         
 
       </div>
