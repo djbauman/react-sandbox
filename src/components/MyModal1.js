@@ -10,11 +10,16 @@ export default class MyModal1 extends Component {
   render() {
     return (
       <>
-        <Modal show={this.props.show_m1} onHide={this.props.onHide} >
+        <Modal 
+          show={this.props.show_m1} 
+          onHide={this.props.onHide} 
+          backdrop="static" 
+          keyboard={false}
+          dialogClassName="modal-header">
           <Modal.Header>
             <Modal.Title>Modal 1</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body className="modal-body">
             I will not close if you click outside me. Don't even try to press the escape key.
         </Modal.Body>
           <Modal.Footer>

@@ -19,14 +19,26 @@ Nav.Link {
   font-size: 10em;
 }
 
-.modal-90w {
-  /* color: green; */
+.modal-header {
+  color: green;
   width: 95%;
   max-width: none;
 }
 
-.modal-body-90h {
+
+.modal-dialog { /* This part of the modal shows a bottom border by default for some reason */
+  color: green;
+  border-bottom: none;
+}
+
+.modal-body {
   color: blue;
+  min-height: 30em;
   height: 50em;
   max-height: 95%;
+}
+
+
+.button-custom-class {
+  color: yellow;
 }

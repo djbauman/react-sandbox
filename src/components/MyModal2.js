@@ -10,11 +10,11 @@ export default class MyModal2 extends Component {
   render() {
     return (
       <>
-        <Modal show={this.props.show_m2} onHide={this.props.onHide}>
+        <Modal show={this.props.show_m2} onHide={this.props.onHide} dialogClassName="modal-header">
           <Modal.Header>
             <Modal.Title>Modal 2</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body className="modal-body">
             This is Modal 2.
         </Modal.Body>
           <Modal.Footer>
