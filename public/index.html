@@ -27,6 +27,22 @@
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
+  <script>
+    const customTitlebar = require('custom-electron-titlebar');
+    let titleBar = new customTitlebar.Titlebar({
+      backgroundColor: customTitlebar.Color.fromHex('#444'),
+      // shadow: true
+      icon: "./circled-g-100-white-fill-source-code-pro-black.png",
+      hideWhenClickingClose: true,
+      
+      // itemBackgroundColor: new Color(new Color.BLUE)
+
+
+    });
+    titleBar.updateTitle('Project G');
+    titlebar.updateItemBGColor(new Color(new RGBA(0, 150, 0, .7))); // Why doesn't this work?
+  </script>
+
   <div id="root"></div>
   <!--
       This HTML file is a template.

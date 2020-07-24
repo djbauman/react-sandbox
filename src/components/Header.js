@@ -6,7 +6,7 @@ import { NewButton } from "./NewButton";
 export default class Header extends Component {
   render() {
     return (
-      <div>
+      <div className="my-header">
         <Navbar bg="light" expand="lg">
           <NewButton />
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

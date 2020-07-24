@@ -19,12 +19,15 @@ Nav.Link {
   font-size: 10em;
 }
 
+.my-header {
+  padding-top: 30px;
+}
+
 .modal-header {
   color: green;
   width: 95%;
   max-width: none;
 }
-
 
 .modal-dialog { /* This part of the modal shows a bottom border by default for some reason */
   color: green;
@@ -37,7 +40,6 @@ Nav.Link {
   height: 50em;
   max-height: 95%;
 }
-
 
 .button-custom-class {
   color: yellow;

@@ -11,6 +11,10 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1600, height: 1000,
     frame: false,
+    webPreferences: {
+      // preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: true
+    }
   });
   // mainWindow.setMenuBarVisibility(false); // toggle to hide/show menu bar
   mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
