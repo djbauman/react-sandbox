@@ -36,9 +36,9 @@ Nav.Link {
 
 .modal-body {
   color: blue;
-  min-height: 30em;
-  height: 50em;
-  max-height: 95%;
+  /* min-height: 30em; */
+  height: 50vh;
+  /* max-height: 95%; */
 }
 
 .button-custom-class {
