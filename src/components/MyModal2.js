@@ -9,7 +9,7 @@ export default class MyModal2 extends Component {
 
   render() {
     return (
-      <>
+      <React.Fragment>
         <Modal show={this.props.show_m2} onHide={this.props.onHide} dialogClassName="modal-header">
           <Modal.Header>
             <Modal.Title>Modal 2</Modal.Title>
@@ -22,7 +22,7 @@ export default class MyModal2 extends Component {
             <Button variant="primary" onClick={this.props.onHide}>Understood</Button>
           </Modal.Footer>
         </Modal>
-      </>
+      </React.Fragment>
     );
   }
 }
