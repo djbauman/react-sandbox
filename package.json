@@ -43,6 +43,6 @@
     "cross-env": "^7.0.2",
     "electron": "^22.3.25",
     "electron-builder": "^22.7.0",
-    "wait-on": "^5.0.1"
+    "wait-on": "^9.1.0"
   }
 }
